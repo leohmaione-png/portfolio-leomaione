@@ -1,0 +1,24 @@
+@layer utilities {
+  .prose-custom ul {
+    @apply flex flex-col gap-3 my-6;
+  }
+  
+  .prose-custom li {
+    @apply font-serif text-[20px] leading-[1.6] text-[#212121] flex items-start;
+  }
+  
+  .prose-custom li::before {
+    content: "•";
+    @apply mr-3 text-[#212121];
+  }
+
+  /* Matching Image 1: 28px / 1.28 / Nanum Gothic (#212121) */
+  .prose-custom h3 {
+    @apply font-apple-gothic text-[28px] leading-[1.28] text-[#212121] mb-6 mt-12;
+  }
+
+  /* Matching Image 2 (Body text implies similar): 20px / 1.6 / Serif */
+  .prose-custom p {
+    @apply font-serif text-[20px] leading-[1.6] text-[#212121] mb-6;
+  }
+}

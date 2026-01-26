@@ -1,0 +1,233 @@
+{
+  "mobile": {
+    "type-2xs": {
+      "$type": "number",
+      "$value": 12,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:1:157",
+        "com.figma.scopes": [
+          "FONT_SIZE"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:5",
+          "targetVariableName": "px12",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "type-xs": {
+      "$type": "number",
+      "$value": 16,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:1:158",
+        "com.figma.scopes": [
+          "FONT_SIZE"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:6",
+          "targetVariableName": "px16",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "type-sm": {
+      "$type": "number",
+      "$value": 20,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:1:159",
+        "com.figma.scopes": [
+          "FONT_SIZE"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:7",
+          "targetVariableName": "px20",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "type-md": {
+      "$type": "number",
+      "$value": 24,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:1:160",
+        "com.figma.scopes": [
+          "FONT_SIZE"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:8",
+          "targetVariableName": "px24",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "type-lg": {
+      "$type": "number",
+      "$value": 28,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:1:161",
+        "com.figma.scopes": [
+          "FONT_SIZE"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:9",
+          "targetVariableName": "px28",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "type-xl": {
+      "$type": "number",
+      "$value": 32,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:1:162",
+        "com.figma.scopes": [
+          "FONT_SIZE"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:10",
+          "targetVariableName": "px32",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "type-2xl": {
+      "$type": "number",
+      "$value": 36,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:1:163",
+        "com.figma.scopes": [
+          "FONT_SIZE"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:11",
+          "targetVariableName": "px36",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    }
+  },
+  "desktop": {
+    "type-2xs": {
+      "$type": "number",
+      "$value": 20,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:1:164",
+        "com.figma.scopes": [
+          "FONT_SIZE"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:7",
+          "targetVariableName": "px20",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "type-xs": {
+      "$type": "number",
+      "$value": 24,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:1:165",
+        "com.figma.scopes": [
+          "FONT_SIZE"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:8",
+          "targetVariableName": "px24",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "type-sm": {
+      "$type": "number",
+      "$value": 28,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:1:166",
+        "com.figma.scopes": [
+          "FONT_SIZE"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:9",
+          "targetVariableName": "px28",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "type-md": {
+      "$type": "number",
+      "$value": 32,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:1:167",
+        "com.figma.scopes": [
+          "FONT_SIZE"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:10",
+          "targetVariableName": "px32",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "type-lg": {
+      "$type": "number",
+      "$value": 36,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:1:168",
+        "com.figma.scopes": [
+          "FONT_SIZE"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:11",
+          "targetVariableName": "px36",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "type-xl": {
+      "$type": "number",
+      "$value": 40,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:1:169",
+        "com.figma.scopes": [
+          "FONT_SIZE"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:12",
+          "targetVariableName": "px40",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "type-2xl": {
+      "$type": "number",
+      "$value": 60,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:1:170",
+        "com.figma.scopes": [
+          "FONT_SIZE"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:17",
+          "targetVariableName": "px60",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    }
+  },
+  "$extensions": {
+    "com.figma.modeName": "Default"
+  }
+}

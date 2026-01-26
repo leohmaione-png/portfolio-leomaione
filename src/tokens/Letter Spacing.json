@@ -1,0 +1,65 @@
+{
+  "tighter": {
+    "$type": "number",
+    "$value": -0.05000000074505806,
+    "$extensions": {
+      "com.figma.variableId": "VariableID:3:23",
+      "com.figma.scopes": [
+        "ALL_SCOPES"
+      ]
+    }
+  },
+  "tight": {
+    "$type": "number",
+    "$value": -0.02500000037252903,
+    "$extensions": {
+      "com.figma.variableId": "VariableID:3:24",
+      "com.figma.scopes": [
+        "ALL_SCOPES"
+      ]
+    }
+  },
+  "normal": {
+    "$type": "number",
+    "$value": 0,
+    "$extensions": {
+      "com.figma.variableId": "VariableID:3:25",
+      "com.figma.scopes": [
+        "ALL_SCOPES"
+      ]
+    }
+  },
+  "wide": {
+    "$type": "number",
+    "$value": 0.02500000037252903,
+    "$extensions": {
+      "com.figma.variableId": "VariableID:3:26",
+      "com.figma.scopes": [
+        "ALL_SCOPES"
+      ]
+    }
+  },
+  "wider": {
+    "$type": "number",
+    "$value": 0.05000000074505806,
+    "$extensions": {
+      "com.figma.variableId": "VariableID:3:27",
+      "com.figma.scopes": [
+        "ALL_SCOPES"
+      ]
+    }
+  },
+  "widest": {
+    "$type": "number",
+    "$value": 0.10000000149011612,
+    "$extensions": {
+      "com.figma.variableId": "VariableID:3:28",
+      "com.figma.scopes": [
+        "ALL_SCOPES"
+      ]
+    }
+  },
+  "$extensions": {
+    "com.figma.modeName": "Default"
+  }
+}

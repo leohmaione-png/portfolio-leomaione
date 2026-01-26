@@ -1,0 +1,233 @@
+{
+  "mobile": {
+    "lh-2xs": {
+      "$type": "number",
+      "$value": 16,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:3:242",
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:6",
+          "targetVariableName": "px16",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "lh-xs": {
+      "$type": "number",
+      "$value": 24,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:3:243",
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:8",
+          "targetVariableName": "px24",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "lh-sm": {
+      "$type": "number",
+      "$value": 28,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:3:244",
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:9",
+          "targetVariableName": "px28",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "lh-md": {
+      "$type": "number",
+      "$value": 32,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:3:245",
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:10",
+          "targetVariableName": "px32",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "lh-lg": {
+      "$type": "number",
+      "$value": 36,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:3:246",
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:11",
+          "targetVariableName": "px36",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "lh-xl": {
+      "$type": "number",
+      "$value": 40,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:3:247",
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:12",
+          "targetVariableName": "px40",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "lh-2xl": {
+      "$type": "number",
+      "$value": 44,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:3:248",
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:13",
+          "targetVariableName": "px44",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    }
+  },
+  "desktop": {
+    "lh-2xs": {
+      "$type": "number",
+      "$value": 28,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:3:249",
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:9",
+          "targetVariableName": "px28",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "lh-xs": {
+      "$type": "number",
+      "$value": 32,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:3:250",
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:10",
+          "targetVariableName": "px32",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "lh-sm": {
+      "$type": "number",
+      "$value": 36,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:3:251",
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:11",
+          "targetVariableName": "px36",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "lh-md": {
+      "$type": "number",
+      "$value": 40,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:3:252",
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:12",
+          "targetVariableName": "px40",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "lh-lg": {
+      "$type": "number",
+      "$value": 44,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:3:253",
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:13",
+          "targetVariableName": "px44",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "lh-xl": {
+      "$type": "number",
+      "$value": 52,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:3:254",
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:15",
+          "targetVariableName": "px52",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "lh-2xl": {
+      "$type": "number",
+      "$value": 64,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:3:255",
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:18",
+          "targetVariableName": "px64",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    }
+  },
+  "$extensions": {
+    "com.figma.modeName": "Default"
+  }
+}

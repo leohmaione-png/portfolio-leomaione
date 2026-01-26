@@ -1,0 +1,233 @@
+{
+  "mobile": {
+    "radius-2xs": {
+      "$type": "number",
+      "$value": 4,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:1:187",
+        "com.figma.scopes": [
+          "CORNER_RADIUS"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:3",
+          "targetVariableName": "px4",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "radius-xs": {
+      "$type": "number",
+      "$value": 8,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:1:188",
+        "com.figma.scopes": [
+          "CORNER_RADIUS"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:4",
+          "targetVariableName": "px8",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "radius-sm": {
+      "$type": "number",
+      "$value": 12,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:1:189",
+        "com.figma.scopes": [
+          "CORNER_RADIUS"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:5",
+          "targetVariableName": "px12",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "radius-md": {
+      "$type": "number",
+      "$value": 16,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:1:190",
+        "com.figma.scopes": [
+          "CORNER_RADIUS"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:6",
+          "targetVariableName": "px16",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "radius-lg": {
+      "$type": "number",
+      "$value": 20,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:1:191",
+        "com.figma.scopes": [
+          "CORNER_RADIUS"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:7",
+          "targetVariableName": "px20",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "radius-xl": {
+      "$type": "number",
+      "$value": 24,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:1:192",
+        "com.figma.scopes": [
+          "CORNER_RADIUS"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:8",
+          "targetVariableName": "px24",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "radius-2xl": {
+      "$type": "number",
+      "$value": 28,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:1:193",
+        "com.figma.scopes": [
+          "CORNER_RADIUS"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:9",
+          "targetVariableName": "px28",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    }
+  },
+  "desktop": {
+    "radius-2xs": {
+      "$type": "number",
+      "$value": 12,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:1:194",
+        "com.figma.scopes": [
+          "CORNER_RADIUS"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:5",
+          "targetVariableName": "px12",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "radius-xs": {
+      "$type": "number",
+      "$value": 24,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:1:195",
+        "com.figma.scopes": [
+          "CORNER_RADIUS"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:8",
+          "targetVariableName": "px24",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "radius-sm": {
+      "$type": "number",
+      "$value": 36,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:1:196",
+        "com.figma.scopes": [
+          "CORNER_RADIUS"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:11",
+          "targetVariableName": "px36",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "radius-md": {
+      "$type": "number",
+      "$value": 48,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:1:197",
+        "com.figma.scopes": [
+          "CORNER_RADIUS"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:14",
+          "targetVariableName": "px48",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "radius-lg": {
+      "$type": "number",
+      "$value": 60,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:1:198",
+        "com.figma.scopes": [
+          "CORNER_RADIUS"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:17",
+          "targetVariableName": "px60",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "radius-xl": {
+      "$type": "number",
+      "$value": 72,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:1:199",
+        "com.figma.scopes": [
+          "CORNER_RADIUS"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:20",
+          "targetVariableName": "px72",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    },
+    "radius-2xl": {
+      "$type": "number",
+      "$value": 84,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:1:200",
+        "com.figma.scopes": [
+          "CORNER_RADIUS"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:1:23",
+          "targetVariableName": "px84",
+          "targetVariableSetId": "VariableCollectionId:1:2",
+          "targetVariableSetName": "Numbers"
+        }
+      }
+    }
+  },
+  "$extensions": {
+    "com.figma.modeName": "Default"
+  }
+}

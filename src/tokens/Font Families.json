@@ -1,0 +1,38 @@
+{
+  "display": {
+    "$type": "string",
+    "$value": "Inter",
+    "$extensions": {
+      "com.figma.type": "string",
+      "com.figma.variableId": "VariableID:1:143",
+      "com.figma.scopes": [
+        "ALL_SCOPES"
+      ]
+    }
+  },
+  "body": {
+    "$type": "string",
+    "$value": "Inter",
+    "$extensions": {
+      "com.figma.type": "string",
+      "com.figma.variableId": "VariableID:1:144",
+      "com.figma.scopes": [
+        "ALL_SCOPES"
+      ]
+    }
+  },
+  "mono": {
+    "$type": "string",
+    "$value": "JetBrains Mono",
+    "$extensions": {
+      "com.figma.type": "string",
+      "com.figma.variableId": "VariableID:1:145",
+      "com.figma.scopes": [
+        "ALL_SCOPES"
+      ]
+    }
+  },
+  "$extensions": {
+    "com.figma.modeName": "Default"
+  }
+}
