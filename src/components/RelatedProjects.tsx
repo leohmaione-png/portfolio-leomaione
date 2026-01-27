@@ -36,7 +36,7 @@ export function RelatedProjects({ companyName, companyIcon, projects, className 
                 <Link 
                     key={project.slug} 
                     href={`/work/${project.slug}`}
-                    className="group border-t last:border-b border-neutral-200 py-10 flex items-center justify-between hover:bg-neutral-50 transition-colors px-4 -mx-4"
+                    className="group border-t border-neutral-200 py-10 flex items-center justify-between hover:bg-neutral-50 transition-colors px-4 -mx-4"
                 >
                     <div className="flex items-center gap-12">
                         {/* Number */}

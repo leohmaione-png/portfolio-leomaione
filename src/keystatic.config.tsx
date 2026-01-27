@@ -1,4 +1,13 @@
 import { config, fields, collection } from '@keystatic/core';
+import { 
+    BarChart3, 
+    LayoutGrid, 
+    MessageSquare, 
+    ImageIcon, 
+    Type, 
+    ArrowLeftRight,
+    StickyNote
+} from 'lucide-react';
 
 export default config({
   storage: {
@@ -28,7 +37,9 @@ export default config({
             components: {
                 // Key Results Block
                 KeyResults: {
+                    kind: 'block',
                     label: 'Key Results (Stats)',
+                    icon: <BarChart3 />,
                     schema: {
                         title: fields.text({ label: 'Section Title', defaultValue: 'Key Results' }),
                         stats: fields.array(
@@ -46,7 +57,9 @@ export default config({
 
                 // Grid List Block (Tenets, Foundations)
                 GridList: {
+                    kind: 'block',
                     label: 'Grid List (2 Cols)',
+                    icon: <LayoutGrid />,
                     schema: {
                         columns: fields.array(
                             fields.object({
@@ -61,9 +74,25 @@ export default config({
                     }
                 },
 
+                // Highlight Block (Image + Title + Label)
+                HighlightBlock: {
+                    kind: 'block',
+                    label: 'Highlight Block',
+                    icon: <MessageSquare />,
+                    schema: {
+                        label: fields.text({ label: 'Label' }),
+                        title: fields.text({ label: 'Title' }),
+                        image: fields.text({ label: 'Image Path' }),
+                        alt: fields.text({ label: 'Alt Text' }),
+                        caption: fields.text({ label: 'Caption' }),
+                    }
+                },
+
                 // Full Width Image with Title
                 FullWidthSection: {
+                    kind: 'block',
                     label: 'Full Width Image',
+                    icon: <ImageIcon />,
                     schema: {
                          title: fields.text({ label: 'Section Title' }),
                          image: fields.text({ label: 'Image Path', description: 'Absolute path like /projects/image.jpg' }),
@@ -73,7 +102,9 @@ export default config({
 
                 // Standard Project Section with Text (Layout wrapper)
                 ProjectSection: {
+                    kind: 'block',
                     label: 'Project Section',
+                    icon: <StickyNote />,
                     schema: {
                         title: fields.text({ label: 'Title' }),
                         content: fields.child({
@@ -86,7 +117,9 @@ export default config({
 
                 // Simple Grid Aligned Image
                 GridImage: {
+                    kind: 'block',
                     label: 'Grid Image (Standard)',
+                    icon: <ImageIcon />,
                     schema: {
                         image: fields.text({ label: 'Image Path' }),
                         alt: fields.text({ label: 'Alt Text' }),
@@ -96,7 +129,9 @@ export default config({
 
                 // Text-only Section Header
                 SectionHeader: {
+                    kind: 'block',
                     label: 'Section Header (Label+Title)',
+                    icon: <Type />,
                     schema: {
                         label: fields.text({ label: 'Label / Supertitle' }),
                         title: fields.text({ label: 'Main Title' }),
@@ -105,7 +140,9 @@ export default config({
 
                 // Before/After Slider
                 BeforeAfterSlider: {
+                    kind: 'block',
                     label: 'Before/After Comparison',
+                    icon: <ArrowLeftRight />,
                     schema: {
                         beforeImage: fields.text({ label: 'Before Image Path' }),
                         afterImage: fields.text({ label: 'After Image Path' }),
@@ -116,6 +153,7 @@ export default config({
             }
         }),
       },
+      // ... company collection below
     }),
     companies: collection({
        label: 'Companies',

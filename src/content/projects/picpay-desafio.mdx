@@ -1,43 +1,81 @@
 ---
 title: Desafio PicPay
 company: PicPay
+icon: /icons/picpay-icon-brand.svg
 coverImage: /projects/PicPay-work.jpg
 heroImage: /projects/PicPay-work.jpg
 description: A comprehensive design challenge solving for peer-to-peer payments.
 ---
 
-<ProjectSection title="Concept">
-  Exploring the future of social payments. This challenge focused on reducing
-  friction in peer-to-peer transactions while maintaining a social connection.
-</ProjectSection>
-
-<ProjectSection title="Visual Exploration" className="mt-16">
-  <Image
-    src="/projects/PicPay-work.jpg"
-    alt="PicPay Design Challenge Screens"
-    width={1356}
-    height={800}
-    className="w-full rounded-lg"
-  />
-</ProjectSection>
-
-<ProjectGridLists
+<GridList
   columns={[
     {
-      title: "Core Features",
+      title: "Objective",
       items: [
-        "Instant transfers",
-        "Social feed integration",
-        "Split bill functionality",
-      ],
-    },
-    {
-      title: "UX Goals",
-      items: [
-        "Zero-click payments",
-        "Trust and security transparency",
-        "Viral loop mechanics",
+        "Increase NPS and banking level active players",
+        "Grow share of wallet and increase non-interest revenue lines",
+        "Offer a complete digital product suite, removing friction across journeys",
+        "Increase efficiency and reduce costs through modular architecture",
+        "Reduce data access cost",
       ],
     },
   ]}
+/>
+
+<GridList
+  columns={[
+    {
+      title: "Tenets",
+      items: [
+        "Focus on context and reduce visual clutter",
+        "Personalization: Provide relevancy at the right time and place",
+        "Data Driven Decisions: every interface decision is measured",
+        "Consistency and ease through a unified, scalable experience",
+      ],
+    },
+    {
+      title: "Foundations",
+      items: [
+        "Create a single, robust app experience (iOS, Android, Web)",
+        "Accessibility Standards (WCAG 2.1)",
+        "Solution usage in real Context (Device, Tech)",
+        "Scalable component based structure (SDS / IDS / LDS)",
+        "Software quality (unit tests, automation)",
+        "Technical debt reduction, deprecate unused code",
+      ],
+    },
+  ]}
+/>
+
+<KeyResults
+  title="Key Results"
+  stats={[
+    { value: "54%", label: "Faster time to market for new features" },
+    { value: "32%", label: "Lower total cost of ownership" },
+    { value: "92%", label: "Adoption rate of new navigation" },
+    { value: "20pp", label: "NPS increase after launch" },
+    { value: "08%", label: "Increase in daily active usage" },
+  ]}
+/>
+
+<HighlightBlock
+  label="Based on feedback and customer mental model"
+  title="We redesigned the navigation focusing on usage frequency × mental effort"
+  image="/projects/itau-navigation-matrix-2.jpg"
+  alt="Navigation Matrix"
+  caption="Also defining the main role of each area that would sit at our nav bar"
+/>
+
+<GridImage image="/projects/itau-hub-images.jpg" alt="Visual Consistency" />
+
+<SectionHeader
+  label="We also standardized navigation across product areas"
+  title="Increasing consistency and ease of use across the app"
+/>
+
+<BeforeAfterSlider
+  beforeImage="/projects/itau-nav-before.jpg"
+  afterImage="/projects/itau-nav-after.jpg"
+  beforeAlt="Legacy Interface"
+  afterAlt="New Design System"
 />

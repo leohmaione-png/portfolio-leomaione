@@ -1,31 +1,81 @@
 ---
 title: Cadastro de chaves Pix
 company: PicPay
+icon: /icons/picpay-icon-brand.svg
 coverImage: /projects/PicPay-work-1.jpg
 heroImage: /projects/PicPay-work-1.jpg
 description: Simplifying the Pix Key registration flow for mass adoption.
 ---
 
-<ProjectSection title="The Pix Revolution">
-  Pix changed payments in Brazil provided a massive opportunity. We needed to
-  design a flow that made key registration effortless and secure.
-</ProjectSection>
-
-<ProjectStats
-  stats={[
-    { value: "10M+", label: "Keys Registered" },
-    { value: "98%", label: "Conversion Rate" },
-    { value: "15s", label: "Avg Time to Register" },
+<GridList
+  columns={[
+    {
+      title: "Objective",
+      items: [
+        "Increase NPS and banking level active players",
+        "Grow share of wallet and increase non-interest revenue lines",
+        "Offer a complete digital product suite, removing friction across journeys",
+        "Increase efficiency and reduce costs through modular architecture",
+        "Reduce data access cost",
+      ],
+    },
   ]}
-  title="Adoption Metrics"
 />
 
-<ProjectSection title="Flow Screens" className="mt-16">
-  <Image
-    src="/projects/PicPay-work-1.jpg"
-    alt="Pix Registration Flow"
-    width={1356}
-    height={800}
-    className="w-full rounded-lg"
-  />
-</ProjectSection>
+<GridList
+  columns={[
+    {
+      title: "Tenets",
+      items: [
+        "Focus on context and reduce visual clutter",
+        "Personalization: Provide relevancy at the right time and place",
+        "Data Driven Decisions: every interface decision is measured",
+        "Consistency and ease through a unified, scalable experience",
+      ],
+    },
+    {
+      title: "Foundations",
+      items: [
+        "Create a single, robust app experience (iOS, Android, Web)",
+        "Accessibility Standards (WCAG 2.1)",
+        "Solution usage in real Context (Device, Tech)",
+        "Scalable component based structure (SDS / IDS / LDS)",
+        "Software quality (unit tests, automation)",
+        "Technical debt reduction, deprecate unused code",
+      ],
+    },
+  ]}
+/>
+
+<KeyResults
+  title="Key Results"
+  stats={[
+    { value: "54%", label: "Faster time to market for new features" },
+    { value: "32%", label: "Lower total cost of ownership" },
+    { value: "92%", label: "Adoption rate of new navigation" },
+    { value: "20pp", label: "NPS increase after launch" },
+    { value: "08%", label: "Increase in daily active usage" },
+  ]}
+/>
+
+<HighlightBlock
+  label="Based on feedback and customer mental model"
+  title="We redesigned the navigation focusing on usage frequency × mental effort"
+  image="/projects/itau-navigation-matrix-2.jpg"
+  alt="Navigation Matrix"
+  caption="Also defining the main role of each area that would sit at our nav bar"
+/>
+
+<GridImage image="/projects/itau-hub-images.jpg" alt="Visual Consistency" />
+
+<SectionHeader
+  label="We also standardized navigation across product areas"
+  title="Increasing consistency and ease of use across the app"
+/>
+
+<BeforeAfterSlider
+  beforeImage="/projects/itau-nav-before.jpg"
+  afterImage="/projects/itau-nav-after.jpg"
+  beforeAlt="Legacy Interface"
+  afterAlt="New Design System"
+/>

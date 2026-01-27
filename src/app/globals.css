@@ -230,7 +230,7 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: var(--color-neutral-700);
     --foreground: #ffffff;
@@ -260,7 +260,7 @@
     --input: var(--color-neutral-600);
     --ring: var(--color-primary-300);
   }
-}
+} */
 
 body {
   background-color: var(--background);
