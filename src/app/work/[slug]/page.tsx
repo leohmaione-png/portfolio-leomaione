@@ -1,7 +1,7 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
-import { getProjectBySlug, getAllProjects, getProjectSlugs } from '@/lib/mdx';
+import { getProjectBySlug, getAllProjects, getProjectSlugs, getCompanyBySlug } from '@/lib/mdx';
 import { ProjectStats } from '@/components/mdx/ProjectStats';
 import { ProjectSection } from '@/components/mdx/ProjectSection';
 import { ProjectNavigation } from '@/components/mdx/ProjectNavigation';
@@ -41,6 +41,16 @@ export default async function ProjectPage({ params }: { params: { slug: string }
 
   const { frontmatter, content } = project;
 
+  // Resolve Company Relation
+  const companySlug = typeof frontmatter.company === 'string' 
+      ? frontmatter.company.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-')
+      : '';
+  
+  const companyData = getCompanyBySlug(companySlug);
+  
+  const brandName = companyData ? companyData.name : frontmatter.company;
+  const brandIcon = companyData ? companyData.icon : frontmatter.icon;
+
   // Determine next project for navigation
   // Logic: find current index, get next, loop back to start if at end
   const allProjects = getAllProjects();
@@ -73,7 +83,7 @@ export default async function ProjectPage({ params }: { params: { slug: string }
     KeyResults: ProjectStats,
     GridList: ProjectGridLists,
     HighlightBlock: HighlightBlock,
-    GridImage: GridImage,
+    StandardGridImage: GridImage,
     SectionHeader: SectionHeader,
     BeforeAfterSlider: BeforeAfterSlider,
     FullWidthSection: FullWidthSection,
@@ -96,8 +106,8 @@ export default async function ProjectPage({ params }: { params: { slug: string }
         <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-6 pt-16 mb-[100px]">
             <div className="col-span-1 md:col-start-2 md:col-span-10 flex flex-col">
                 <WorkSectionHeader 
-                    brandName={frontmatter.company}
-                    brandIconSrc={frontmatter.icon}
+                    brandName={brandName}
+                    brandIconSrc={brandIcon}
                     caseName={caseNumber}
                     className="px-0 py-0 lg:px-0 max-w-none mb-[56px]"
                 />

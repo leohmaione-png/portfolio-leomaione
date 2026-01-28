@@ -35,3 +35,16 @@ export function getAllProjects() {
   // Sort projects by date or order if needed; for now, keeping as is
   return projects;
 }
+
+const companiesDirectory = path.join(process.cwd(), 'src/content/companies');
+
+export function getCompanyBySlug(slug: string) {
+  const fullPath = path.join(companiesDirectory, `${slug}.json`);
+  
+  if (!fs.existsSync(fullPath)) {
+    return null;
+  }
+
+  const fileContents = fs.readFileSync(fullPath, 'utf8');
+  return JSON.parse(fileContents);
+}

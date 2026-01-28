@@ -14,6 +14,8 @@ interface ProjectStatsProps {
 }
 
 export function ProjectStats({ stats, title, className }: ProjectStatsProps) {
+  if (!stats || stats.length === 0) return null;
+
   return (
     <div className={cn("w-full pt-[68px] pb-32", className)}>
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6">

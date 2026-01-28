@@ -1,11 +1,15 @@
 import React from "react";
 import { ProjectGroup } from "./ProjectGroup";
-import { PROJECTS_DATA } from "@/data/projects";
+import { ProjectGroupData } from "@/utils/keystatic";
 
-export function ProjectList() {
+interface ProjectListProps {
+  groups: ProjectGroupData[];
+}
+
+export function ProjectList({ groups }: ProjectListProps) {
   return (
     <div className="flex flex-col w-full gap-[140px]">
-      {PROJECTS_DATA.map((group) => (
+      {groups.map((group) => (
         <ProjectGroup 
             key={group.company}
             company={group.company}

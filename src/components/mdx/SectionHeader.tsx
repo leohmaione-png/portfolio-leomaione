@@ -8,6 +8,8 @@ interface SectionHeaderProps {
 }
 
 export function SectionHeader({ label, title, className }: SectionHeaderProps) {
+  if (!title) return null;
+  
   return (
     <div className={cn("w-full pt-[68px] pb-32", className)}>
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
@@ -21,7 +23,7 @@ export function SectionHeader({ label, title, className }: SectionHeaderProps) {
           )}
 
           {/* Title */}
-          <h2 className="font-apple-gothic text-[48px] leading-[1.1] text-[#212121] max-w-4xl">
+          <h2 className="font-apple-gothic text-[48px] leading-[1.1] text-[#212121]">
             {title}
           </h2>
 

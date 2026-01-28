@@ -2,23 +2,57 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import localFont from "next/font/local";
-import { Inter, Nanum_Gothic, Nanum_Myeongjo } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  subsets: ["latin"],
+const inter = localFont({
+  src: [
+    {
+      path: "../../public/fonts/inter-variable.woff2",
+      style: "normal",
+    },
+  ],
   variable: "--font-inter",
 });
 
-const nanumGothic = Nanum_Gothic({
-  weight: ["400", "700", "800"],
-  subsets: ["latin"],
+const nanumGothic = localFont({
+  src: [
+    {
+      path: "../../public/fonts/nanum-gothic-400.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/nanum-gothic-700.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/nanum-gothic-800.woff2",
+      weight: "800",
+      style: "normal",
+    },
+  ],
   variable: "--font-nanum-gothic",
 });
 
-const nanumMyeongjo = Nanum_Myeongjo({
-  weight: ["400", "700", "800"],
-  subsets: ["latin"],
+const nanumMyeongjo = localFont({
+  src: [
+    {
+      path: "../../public/fonts/nanum-myeongjo-400.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/nanum-myeongjo-700.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/nanum-myeongjo-800.woff2",
+      weight: "800",
+      style: "normal",
+    },
+  ],
   variable: "--font-nanum-myeongjo",
 });
 

@@ -12,6 +12,8 @@ interface ProjectGridListsProps {
 }
 
 export function ProjectGridLists({ columns, className }: ProjectGridListsProps) {
+  if (!columns || columns.length === 0) return null;
+
   return (
     <div className={cn("w-full py-32", className)}>
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6">

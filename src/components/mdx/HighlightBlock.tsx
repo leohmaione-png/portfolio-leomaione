@@ -25,7 +25,7 @@ export function HighlightBlock({ label, title, image, alt, caption, className }:
           )}
 
           {/* Title */}
-          <h2 className="font-apple-gothic text-[48px] leading-[1.1] text-[#212121] mb-[64px] max-w-4xl">
+          <h2 className="font-apple-gothic text-[48px] leading-[1.1] text-[#212121] mb-[64px]">
             {title}
           </h2>
 

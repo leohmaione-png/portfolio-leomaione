@@ -25,13 +25,13 @@ export const PROJECTS_DATA: ProjectGroupData[] = [
       {
         id: "itau-personal-finance",
         title: "Personal Finance Manager",
-        image: "/projects/nu-ui.jpg", // Placeholder
+        image: "/projects/nu-transport.jpg", // Placeholder
         company: "Itaú",
       },
       {
         id: "itau-transaction-feed",
         title: "Transaction Feed redesign",
-        image: "/projects/nu-transport.jpg", // Placeholder
+        image: "/projects/nu-ui.jpg", // Placeholder
         company: "Itaú",
       },
     ],
