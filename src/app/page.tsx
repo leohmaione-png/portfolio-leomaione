@@ -2,6 +2,7 @@ import React from "react";
 import { HeaderHome } from "@/components/HeaderHome";
 import { HeroHome } from "@/components/HeroHome";
 import { ProjectList } from "@/components/ProjectList";
+import { FadeIn } from "@/components/animations/FadeIn";
 
 import { getProjectsGroupedByCompany } from "@/utils/keystatic";
 
@@ -18,8 +19,11 @@ export default async function Home() {
 
       {/* Work Section */}
       <section className="w-full pb-32">
-        <ProjectList groups={groups} />
+        <FadeIn>
+            <ProjectList groups={groups} />
+        </FadeIn>
       </section>
     </main>
   );
 }
+

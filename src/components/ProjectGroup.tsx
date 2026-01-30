@@ -70,28 +70,30 @@ export function ProjectGroup({ company, icon, projects }: ProjectGroupProps) {
         className="mb-8"
       />
       {/* Carousel Container - Standard Contained Layout */}
-      <div className="w-full max-w-[1356px] mx-auto px-24 lg:px-48">
-        <Carousel ref={carouselRef}>
-          {projects.map((project) => (
-            <CarouselItem key={project.id} className="w-full md:w-[calc((100%_-_64px)_/_3)]">
-              <CardPortfolio
-                title={project.title}
-                imageSrc={project.image}
-                imageAlt={project.title}
-                href={`/work/${project.id}`}
-              />
-            </CarouselItem>
-          ))}
-        </Carousel>
+      <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-4 md:grid-cols-12 gap-x-6">
+        <div className="col-span-4 md:col-start-2 md:col-span-10">
+            <Carousel ref={carouselRef}>
+            {projects.map((project) => (
+                <CarouselItem key={project.id} className="w-full md:w-[calc((100%_-_64px)_/_3)]">
+                <CardPortfolio
+                    title={project.title}
+                    imageSrc={project.image}
+                    imageAlt={project.title}
+                    href={`/work/${project.id}`}
+                />
+                </CarouselItem>
+            ))}
+            </Carousel>
 
-        {/* Navigation - Bottom Centered */}
-        <div className="flex justify-center mt-[60px]">
-             <CarouselNav 
-                onPrev={scrollPrev} 
-                onNext={scrollNext} 
-                disabledPrev={!canScrollPrev}
-                disabledNext={!canScrollNext}
-             />
+            {/* Navigation - Bottom Centered */}
+            <div className="flex justify-center mt-[60px]">
+                <CarouselNav 
+                    onPrev={scrollPrev} 
+                    onNext={scrollNext} 
+                    disabledPrev={!canScrollPrev}
+                    disabledNext={!canScrollNext}
+                />
+            </div>
         </div>
       </div>
     </section>

@@ -40,12 +40,12 @@ export function RelatedProjects({ companyName, companyIcon, projects, className 
                 >
                     <div className="flex items-center gap-12">
                         {/* Number */}
-                        <span className="font-serif text-[96px] leading-[1] text-[#212121]">
+                        <span className="font-serif text-[64px] md:text-[96px] leading-[1] text-[#212121]">
                             {String(project.index).padStart(2, '0')}
                         </span>
                         
                         {/* Title - Break after first word */}
-                        <span className="font-apple-gothic text-[36px] leading-[1.1] text-[#212121] max-w-lg pt-4">
+                        <span className="font-apple-gothic text-[20px] md:text-[36px] leading-[1.1] text-[#212121] max-w-lg pt-4">
                             {(() => {
                                 const [first, ...rest] = project.title.split(' ');
                                 return (

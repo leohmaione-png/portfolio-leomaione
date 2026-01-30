@@ -6,7 +6,8 @@ import {
     ImageIcon, 
     Type, 
     ArrowLeftRight,
-    StickyNote
+    StickyNote,
+    PlayCircle
 } from 'lucide-react';
 
 export default config({
@@ -180,6 +181,26 @@ export default config({
                          }),
                          beforeAlt: fields.text({ label: 'Before Alt Text' }),
                          afterAlt: fields.text({ label: 'After Alt Text' }),
+                     }
+                 },
+
+                 // Project Video
+                 ProjectVideo: {
+                     kind: 'block',
+                     label: 'Project Video',
+                     icon: <PlayCircle />,
+                     schema: {
+                         src: fields.text({ label: 'Video URL (e.g. /videos/demo.mp4)' }),
+                         poster: fields.image({
+                             label: 'Poster Image',
+                             directory: 'public/projects',
+                             publicPath: '/projects/',
+                         }),
+                         caption: fields.text({ label: 'Caption' }),
+                         autoPlay: fields.checkbox({ label: 'Auto Play', defaultValue: true }),
+                         loop: fields.checkbox({ label: 'Loop', defaultValue: true }),
+                         muted: fields.checkbox({ label: 'Muted', defaultValue: true }),
+                         controls: fields.checkbox({ label: 'Show Controls', defaultValue: false }),
                      }
                  }
              }

@@ -41,8 +41,8 @@ export function HeaderHomeDesktop({ className }: HeaderHomeDesktopProps) {
             >
               Work
             </MenuLink>
-           <MenuLink href="https://medium.com" target="_blank">Medium</MenuLink>
-           <MenuLink href="https://linkedin.com" target="_blank">LinkedIn</MenuLink>
+           <MenuLink href="https://medium.com/@leomaione" target="_blank">Medium</MenuLink>
+           <MenuLink href="https://www.linkedin.com/in/leandromaione/" target="_blank">LinkedIn</MenuLink>
            <MenuLink href="#" disabled>Courses</MenuLink>
         </nav>
       </div>

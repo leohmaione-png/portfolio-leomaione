@@ -14,50 +14,52 @@ interface WorkProjectGroupProps {
 
 export function WorkProjectGroup({ company, icon, projects, startIndex }: WorkProjectGroupProps) {
   return (
-    <div className="w-full">
-        {/* Header: Work // Company */}
-        <WorkSectionHeader 
-            brandName={company}
-            brandIconSrc={icon}
-            className="px-0 py-0 lg:px-0 mb-12 max-w-none"
-        />
+    <div className="w-full max-w-[1440px] mx-auto px-0 md:px-12 grid grid-cols-4 md:grid-cols-12 gap-x-6">
+        <div className="col-span-4 md:col-start-2 md:col-span-10">
+            {/* Header: Work // Company */}
+            <WorkSectionHeader 
+                brandName={company}
+                brandIconSrc={icon}
+                className="px-0 py-0 md:px-0 mb-12 max-w-none w-full"
+            />
 
-        {/* Vertical List */}
-        <div className="flex flex-col">
-            {projects.map((project, i) => (
-                <Link 
-                    key={project.id} 
-                    href={`/work/${project.id}`}
-                    className="group border-t border-neutral-200 py-10 flex items-center justify-between hover:bg-neutral-50 transition-colors px-4 -mx-4"
-                >
-                    <div className="flex items-center gap-12">
-                        {/* Number */}
-                        <span className="font-serif text-[64px] md:text-[96px] leading-[1] text-[#212121]">
-                            {String(startIndex + i + 1).padStart(2, '0')}
-                        </span>
-                        
-                        {/* Title */}
-                         <span className="font-apple-gothic text-[24px] md:text-[36px] leading-[1.1] text-[#212121] max-w-lg pt-4">
-                            {(() => {
-                                const words = project.title.split(' ');
-                                if (words.length > 1) {
-                                  return (
-                                    <>
-                                      {words[0]}
-                                      <br />
-                                      {words.slice(1).join(' ')}
-                                    </>
-                                  );
-                                }
-                                return project.title;
-                            })()}
-                        </span>
-                    </div>
+            {/* Vertical List */}
+            <div className="flex flex-col">
+                {projects.map((project, i) => (
+                    <Link 
+                        key={project.id} 
+                        href={`/work/${project.id}`}
+                        className="group border-t border-neutral-200 py-10 flex items-center justify-between hover:bg-neutral-50 transition-colors px-0 -mx-0 md:px-4 md:-mx-4"
+                    >
+                        <div className="flex items-center gap-12">
+                            {/* Number */}
+                            <span className="font-serif text-[64px] md:text-[96px] leading-[1] text-[#212121]">
+                                {String(startIndex + i + 1).padStart(2, '0')}
+                            </span>
+                            
+                            {/* Title */}
+                            <span className="font-apple-gothic text-[24px] md:text-[36px] leading-[1.1] text-[#212121] max-w-lg pt-4">
+                                {(() => {
+                                    const words = project.title.split(' ');
+                                    if (words.length > 1) {
+                                    return (
+                                        <>
+                                        {words[0]}
+                                        <br />
+                                        {words.slice(1).join(' ')}
+                                        </>
+                                    );
+                                    }
+                                    return project.title;
+                                })()}
+                            </span>
+                        </div>
 
-                    {/* Arrow Button */}
-                    <ActionIcon variant="ghost" />
-                </Link>
-            ))}
+                        {/* Arrow Button */}
+                        <ActionIcon variant="ghost" />
+                    </Link>
+                ))}
+            </div>
         </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
+import { FadeIn } from '@/components/animations/FadeIn';
 
 interface HighlightBlockProps {
   label?: string;
@@ -14,41 +15,44 @@ interface HighlightBlockProps {
 export function HighlightBlock({ label, title, image, alt, caption, className }: HighlightBlockProps) {
   return (
     <div className={cn("w-full pb-1 pt-[40px] md:pt-[68px]", className)}>
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-        <div className="col-span-1 md:col-start-2 md:col-span-10 flex flex-col">
-          
-          {/* Label / Supertitle */}
-          {label && (
-             <span className="font-serif text-[20px] leading-[1.6] text-[#212121] mb-6 block">
-               {label}
-             </span>
-          )}
+      <FadeIn>
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+            <div className="col-span-1 md:col-start-2 md:col-span-10 flex flex-col">
+            
+            {/* Label / Supertitle */}
+            {label && (
+                <span className="font-serif text-[20px] leading-[1.6] text-[#212121] mb-2 md:mb-6 block">
+                {label}
+                </span>
+            )}
 
-          {/* Title */}
-          <h2 className="font-apple-gothic text-[32px] md:text-[48px] leading-[1.1] text-[#212121] mb-[32px] md:mb-[64px]">
-            {title}
-          </h2>
+            {/* Title */}
+            <h2 className="font-apple-gothic text-[32px] md:text-[48px] leading-[1.1] text-[#212121] mb-[32px] md:mb-[64px]">
+                {title}
+            </h2>
 
-          {/* Image */}
-          <div className="w-full relative mb-4">
-            <Image
-                src={image}
-                alt={alt || title}
-                width={1356}
-                height={800}
-                className="w-full h-auto"
-            />
-          </div>
+            {/* Image */}
+            <div className="w-full relative mb-4">
+                <Image
+                    src={image}
+                    alt={alt || title}
+                    width={1356}
+                    height={800}
+                    className="w-full h-auto"
+                />
+            </div>
 
-          {/* Caption */}
-          {caption && (
-             <p className="font-serif text-[16px] leading-[1.6] text-[#212121] text-center mt-8 w-full">
-               {caption}
-             </p>
-          )}
+            {/* Caption */}
+            {caption && (
+                <p className="font-serif text-[16px] leading-[1.6] text-[#212121] text-center mt-8 w-full">
+                {caption}
+                </p>
+            )}
 
+            </div>
         </div>
-      </div>
+      </FadeIn>
     </div>
   );
 }
+

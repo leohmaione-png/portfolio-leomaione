@@ -17,6 +17,7 @@ import { SectionHeader } from '@/components/mdx/SectionHeader';
 import { BeforeAfterSlider } from '@/components/mdx/BeforeAfterSlider';
 import { RelatedProjects } from '@/components/RelatedProjects';
 import Image from 'next/image';
+import { ProjectVideo } from '@/components/mdx/ProjectVideo';
 
 /*
   This ensures the build process knows which paths to generate statistically if we were using static export.
@@ -84,6 +85,7 @@ export default async function ProjectPage({ params }: { params: { slug: string }
     GridList: ProjectGridLists,
     HighlightBlock: HighlightBlock,
     StandardGridImage: GridImage,
+    ProjectVideo: ProjectVideo,
     SectionHeader: SectionHeader,
     BeforeAfterSlider: BeforeAfterSlider,
     FullWidthSection: FullWidthSection,
@@ -103,13 +105,13 @@ export default async function ProjectPage({ params }: { params: { slug: string }
       <main className="pt-20">
         {/* Work Section Header with Brand and Breadcrumbs */}
         {/* Header & Title - Grid Cols 2-11 */}
-        <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-6 pt-16 mb-[100px]">
+        <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-6 pt-16 mb-[72px] md:mb-[100px]">
             <div className="col-span-1 md:col-start-2 md:col-span-10 flex flex-col">
                 <WorkSectionHeader 
                     brandName={brandName}
                     brandIconSrc={brandIcon}
                     caseName={caseNumber}
-                    className="px-0 py-0 lg:px-0 max-w-none mb-[56px]"
+                    className="px-0 py-0 lg:px-0 max-w-none"
                 />
             </div>
         </div>
@@ -131,8 +133,8 @@ export default async function ProjectPage({ params }: { params: { slug: string }
         <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-6">
             <div className="col-span-1 md:col-start-2 md:col-span-10">
                 <RelatedProjects
-                    companyName={frontmatter.company}
-                    companyIcon={frontmatter.icon}
+                    companyName={brandName}
+                    companyIcon={brandIcon}
                     projects={relatedProjects}
                     className="mt-[100px]"
                 />

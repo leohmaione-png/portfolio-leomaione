@@ -20,12 +20,12 @@ export function ProjectGridLists({ columns, className }: ProjectGridListsProps) 
         <div className="col-span-1 md:col-start-2 md:col-span-10 flex flex-col gap-64">
           {columns.map((col, index) => (
             <div key={index} className="flex flex-col gap-16">
-              <h3 className="font-apple-gothic text-[28px] leading-[1.28] text-[#212121]">
+              <h3 className="font-apple-gothic text-[20px] md:text-[28px] leading-[1.28] text-[#212121]">
                 {col.title}
               </h3>
               <ul className="flex flex-col gap-3">
                 {col.items.map((item, i) => (
-                  <li key={i} className="font-serif text-[20px] leading-[1.6] text-[#212121] flex items-start">
+                  <li key={i} className="font-serif text-[16px] md:text-[20px] leading-[1.6] text-[#212121] flex items-start">
                       <span className="mr-3">•</span>
                       <span>{item}</span>
                   </li>

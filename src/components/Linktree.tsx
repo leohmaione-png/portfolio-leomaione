@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 
 const linktreeVariants = cva(
-  "flex items-center justify-center gap-[10px] w-fit font-serif text-display-md transition-colors duration-200",
+  "flex items-center justify-center gap-[10px] w-fit font-serif text-[14px] md:text-display-md transition-colors duration-200",
   {
     variants: {
       state: {

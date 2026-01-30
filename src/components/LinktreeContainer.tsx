@@ -20,7 +20,7 @@ export function LinktreeContainer({
       {/* Separator 1 */}
       {brandLabel && (
         <>
-            <span className="text-display-md font-serif text-[#212121] select-none">
+            <span className="font-serif text-[#212121] select-none text-[14px] md:text-display-md">
                 {"//"}
             </span>
             {/* Level 2: Brand */}
@@ -31,7 +31,7 @@ export function LinktreeContainer({
       {/* Separator 2 */}
       {caseLabel && (
         <>
-            <span className="text-display-md font-serif text-[#212121] select-none">
+            <span className="font-serif text-[#212121] select-none text-[14px] md:text-display-md">
                 {"//"}
             </span>
             {/* Level 3: Case */}
