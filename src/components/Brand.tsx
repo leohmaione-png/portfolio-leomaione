@@ -3,15 +3,16 @@ import { cn } from "@/lib/utils";
 
 interface BrandProps {
   className?: string;
-  src?: string;
+  src?: string | null;
   alt?: string;
 }
 
 export function Brand({
   className,
-  src = "/icons/brand.svg", // Default to the main brand icon we downloaded
+  src: srcProp,
   alt = "Brand Logo",
 }: BrandProps) {
+  const src = srcProp || "/icons/brand.svg";
   return (
     <div className={cn("relative w-[52px] h-[52px]", className)}>
        <img 

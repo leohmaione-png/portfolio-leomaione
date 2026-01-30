@@ -15,12 +15,12 @@ export function ProjectHero({ title, subtitle, heroImageSrc, className }: Projec
       <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-6 mb-[100px]">
         {/* Title & Subtitle Container taking 10 cols centered or starting from col 2 */}
         <div className="col-span-1 md:col-start-2 md:col-span-10 flex flex-col">
-          <h1 className="font-apple-gothic text-[96px] lg:text-[156px] leading-[0.95] tracking-tight text-[#212121]">
+          <h1 className="font-apple-gothic text-[48px] md:text-[96px] lg:text-[156px] leading-[0.95] tracking-tight text-[#212121]">
             {title}
           </h1>
 
           {subtitle && (
-            <p className="mt-[125px] font-serif text-[28px] leading-[1.3] text-[#212121] w-full md:max-w-[80%]">
+            <p className="mt-[40px] md:mt-[125px] font-serif text-[28px] leading-[1.3] text-[#212121] w-full md:max-w-[80%]">
               {subtitle}
             </p>
           )}

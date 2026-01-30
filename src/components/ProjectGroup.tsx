@@ -8,13 +8,13 @@ import { CardPortfolio } from "./CardPortfolio";
 
 interface Project {
   id: string | number;
-  image: string;
+  image: string | null;
   title: string;
 }
 
 interface ProjectGroupProps {
   company: string;
-  icon: string;
+  icon: string | null;
   projects: Project[];
 }
 

@@ -13,7 +13,7 @@ interface HighlightBlockProps {
 
 export function HighlightBlock({ label, title, image, alt, caption, className }: HighlightBlockProps) {
   return (
-    <div className={cn("w-full pb-32 pt-[68px]", className)}>
+    <div className={cn("w-full pb-1 pt-[40px] md:pt-[68px]", className)}>
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
         <div className="col-span-1 md:col-start-2 md:col-span-10 flex flex-col">
           
@@ -25,7 +25,7 @@ export function HighlightBlock({ label, title, image, alt, caption, className }:
           )}
 
           {/* Title */}
-          <h2 className="font-apple-gothic text-[48px] leading-[1.1] text-[#212121] mb-[64px]">
+          <h2 className="font-apple-gothic text-[32px] md:text-[48px] leading-[1.1] text-[#212121] mb-[32px] md:mb-[64px]">
             {title}
           </h2>
 

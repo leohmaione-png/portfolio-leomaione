@@ -15,11 +15,11 @@ export function HeroHome() {
     <section className="relative w-full min-h-[85vh] flex flex-col justify-center overflow-hidden">
       
       {/* Grid Container */}
-      <div className="w-full max-w-[1356px] mx-auto px-24 lg:px-48 grid grid-cols-4 lg:grid-cols-12 gap-x-6 h-full items-center relative">
+      <div className="w-full max-w-[1356px] mx-auto px-6 md:px-24 lg:px-48 grid grid-cols-4 lg:grid-cols-12 gap-x-6 h-full items-center relative">
         
         {/* Left Content: Typography - Spans 10 columns on desktop */}
         <div className="col-span-4 lg:col-span-12 flex flex-col justify-center z-10 selection:bg-[#281EDF] selection:text-white">
-            <h1 className="font-apple-gothic font-normal text-[80px] lg:text-[180px] leading-[1] text-[#212121] tracking-tighter">
+            <h1 className="font-apple-gothic font-normal text-[48px] md:text-[80px] lg:text-[180px] leading-[1] text-[#212121] tracking-tighter">
                 Maione. <br />
                 Head of Design
             </h1>

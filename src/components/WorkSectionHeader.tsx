@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 interface WorkSectionHeaderProps {
     brandName?: string;
-    brandIconSrc?: string;
+    brandIconSrc?: string | null;
     caseName?: string;
     className?: string;
     action?: React.ReactNode;

@@ -6,7 +6,7 @@ import { ActionIcon } from "./ActionIcon";
 
 interface CardPortfolioProps {
   title: string;
-  imageSrc: string;
+  imageSrc: string | null;
   imageAlt?: string;
   href?: string;
   className?: string;
@@ -29,13 +29,15 @@ export function CardPortfolio({
     >
       {/* Image Container */}
       <div className="relative w-full aspect-square overflow-hidden rounded-[5px] bg-neutral-200">
-        <Image
-          src={imageSrc}
-          alt={imageAlt}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
-        />
+        {imageSrc && (
+          <Image
+            src={imageSrc}
+            alt={imageAlt}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        )}
       </div>
 
       {/* Title Row */}

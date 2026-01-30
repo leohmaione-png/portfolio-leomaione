@@ -134,6 +134,7 @@ export default async function ProjectPage({ params }: { params: { slug: string }
                     companyName={frontmatter.company}
                     companyIcon={frontmatter.icon}
                     projects={relatedProjects}
+                    className="mt-[100px]"
                 />
             </div>
         </div>

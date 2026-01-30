@@ -6,13 +6,13 @@ const reader = createReader(process.cwd(), config);
 export interface Project {
   id: string;
   title: string;
-  image: string;
+  image: string | null;
   company: string;
 }
 
 export interface ProjectGroupData {
   company: string;
-  icon: string;
+  icon: string | null;
   projects: Project[];
 }
 
@@ -37,13 +37,13 @@ export async function getProjectsGroupedByCompany(): Promise<ProjectGroupData[]>
     // Let's stick to the JSON helper for simplicity if possible, or use reader.collections.companies.read(slug)
     
     let companyName = 'Other';
-    let companyIcon = '';
+    let companyIcon: string | null = null;
 
     if (companySlug) {
        const companyData = await reader.collections.companies.read(companySlug);
        if (companyData) {
             companyName = companyData.name;
-            companyIcon = companyData.icon || '';
+            companyIcon = companyData.icon || null;
        }
     }
     
@@ -58,7 +58,7 @@ export async function getProjectsGroupedByCompany(): Promise<ProjectGroupData[]>
     groups[companyName].projects.push({
       id: project.slug,
       title: data.title,
-      image: data.coverImage || '',
+      image: data.coverImage || null,
       company: companyName,
     });
   }

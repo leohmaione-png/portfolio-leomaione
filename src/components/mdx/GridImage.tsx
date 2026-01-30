@@ -11,7 +11,7 @@ interface GridImageProps {
 
 export function GridImage({ image, alt, caption, className }: GridImageProps) {
   return (
-    <div className={cn("w-full py-16", className)}>
+    <div className={cn("w-full py-1", className)}>
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
         <div className="col-span-1 md:col-start-2 md:col-span-10">
           <div className="w-full relative mb-4">
@@ -21,6 +21,7 @@ export function GridImage({ image, alt, caption, className }: GridImageProps) {
                 width={1356}
                 height={800}
                 className="w-full h-auto"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1356px"
             />
           </div>
           {caption && (
