@@ -31,38 +31,40 @@ export function RelatedProjects({ companyName, companyIcon, projects, className 
         />
 
         {/* Project List */}
-        <div className="flex flex-col">
-            {projects.map((project) => (
-                <Link 
-                    key={project.slug} 
-                    href={`/work/${project.slug}`}
-                    className="group border-t border-neutral-200 py-10 flex items-center justify-between hover:bg-neutral-50 transition-colors px-4 -mx-4"
-                >
-                    <div className="flex items-center gap-12">
-                        {/* Number */}
-                        <span className="font-serif text-[64px] md:text-[96px] leading-[1] text-[#212121]">
-                            {String(project.index).padStart(2, '0')}
-                        </span>
-                        
-                        {/* Title - Break after first word */}
-                        <span className="font-apple-gothic text-[20px] md:text-[36px] leading-[1.1] text-[#212121] max-w-lg pt-4">
-                            {(() => {
-                                const [first, ...rest] = project.title.split(' ');
-                                return (
-                                    <>
-                                        {first}
-                                        {rest.length > 0 && <br />}
-                                        {rest.join(' ')}
-                                    </>
-                                );
-                            })()}
-                        </span>
-                    </div>
+        <div className="grid grid-cols-4 md:grid-cols-12 gap-x-6">
+            <div className="col-span-4 md:col-start-2 md:col-span-10 flex flex-col">
+                {projects.map((project) => (
+                    <Link 
+                        key={project.slug} 
+                        href={`/work/${project.slug}`}
+                        className="group border-t border-neutral-200 py-10 flex items-center justify-between hover:bg-neutral-50 transition-colors px-4 -mx-4"
+                    >
+                        <div className="flex items-center gap-12">
+                            {/* Number */}
+                            <span className="font-serif text-[64px] md:text-[96px] leading-[1] text-[#212121]">
+                                {String(project.index).padStart(2, '0')}
+                            </span>
+                            
+                            {/* Title - Break after first word */}
+                            <span className="font-apple-gothic text-[20px] md:text-[36px] leading-[1.1] text-[#212121] max-w-lg pt-4">
+                                {(() => {
+                                    const [first, ...rest] = project.title.split(' ');
+                                    return (
+                                        <>
+                                            {first}
+                                            {rest.length > 0 && <br />}
+                                            {rest.join(' ')}
+                                        </>
+                                    );
+                                })()}
+                            </span>
+                        </div>
 
-                    {/* Arrow Button */}
-                    <ActionIcon variant="ghost" />
-                </Link>
-            ))}
+                        {/* Arrow Button */}
+                        <ActionIcon variant="ghost" />
+                    </Link>
+                ))}
+            </div>
         </div>
     </div>
   );

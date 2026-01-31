@@ -14,17 +14,17 @@ interface WorkProjectGroupProps {
 
 export function WorkProjectGroup({ company, icon, projects, startIndex }: WorkProjectGroupProps) {
   return (
-    <div className="w-full max-w-[1440px] mx-auto px-0 md:px-12 grid grid-cols-4 md:grid-cols-12 gap-x-6">
-        <div className="col-span-4 md:col-start-2 md:col-span-10">
-            {/* Header: Work // Company */}
-            <WorkSectionHeader 
-                brandName={company}
-                brandIconSrc={icon}
-                className="px-0 py-0 md:px-0 mb-12 max-w-none w-full"
-            />
+    <div className="w-full">
+         {/* Header: Work // Company - internal grid handles alignment */}
+         <WorkSectionHeader 
+             brandName={company}
+             brandIconSrc={icon}
+             className="px-0 py-0 md:px-0 mb-12 max-w-none w-full"
+         />
 
-            {/* Vertical List */}
-            <div className="flex flex-col">
+         {/* Vertical List - needs its own grid wrapper to align matches header */}
+         <div className="w-full max-w-[1440px] mx-auto px-0 md:px-12 grid grid-cols-4 md:grid-cols-12 gap-x-6">
+             <div className="col-span-4 md:col-start-2 md:col-span-10 flex flex-col">
                 {projects.map((project, i) => (
                     <Link 
                         key={project.id} 

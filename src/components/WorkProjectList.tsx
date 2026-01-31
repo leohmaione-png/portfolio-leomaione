@@ -22,7 +22,7 @@ export function WorkProjectList({ groups }: WorkProjectListProps) {
                 company={group.company}
                 icon={group.icon}
                 projects={group.projects}
-                startIndex={startIndex}
+                startIndex={0}
             />
           </FadeIn>
         );

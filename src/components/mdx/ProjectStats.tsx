@@ -30,9 +30,9 @@ export function ProjectStats({ stats, title, className }: ProjectStatsProps) {
                     </div>
                 )}
                 
-                <div className="grid grid-cols-1 min-[1365px]:grid-cols-5 gap-0">
+                <div className="flex flex-col min-[1365px]:flex-row w-full">
                     {stats.map((stat, index) => (
-                    <div key={index} className="flex flex-col gap-4 py-6 first:pt-0 last:pb-0 border-b border-neutral-200 last:border-b-0 min-[1365px]:py-0 min-[1365px]:border-b-0 min-[1365px]:border-r min-[1365px]:last:border-r-0 min-[1365px]:px-16 min-[1365px]:first:pl-0 min-[1365px]:last:pr-0">
+                    <div key={index} className="flex-1 flex flex-col gap-4 py-6 first:pt-0 last:pb-0 border-b border-neutral-200 last:border-b-0 min-[1365px]:py-0 min-[1365px]:border-b-0 min-[1365px]:border-r min-[1365px]:last:border-r-0 min-[1365px]:px-16 min-[1365px]:first:pl-0 min-[1365px]:last:pr-0">
                         <div className="flex items-baseline">
                         <span className="font-inter font-bold text-[64px] min-[1365px]:text-[96px] leading-[0.9] tracking-tighter text-[#212121]">
                             {stat.value.replace(/\D/g, '')}

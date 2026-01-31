@@ -8,6 +8,7 @@ export interface Project {
   title: string;
   image: string | null;
   company: string;
+  sortOrder: number;
 }
 
 export interface ProjectGroupData {
@@ -19,22 +20,13 @@ export interface ProjectGroupData {
 export async function getProjectsGroupedByCompany(): Promise<ProjectGroupData[]> {
   const allProjects = await reader.collections.projects.all();
   
-  // Sort or filter if needed? Currently just all.
   // Group by company
   const groups: Record<string, ProjectGroupData> = {};
 
-  // Preserve order based on appearance or just predefined? 
-  // Maybe we want to sort companies? For now insertion order.
-  
   for (const project of allProjects) {
     const data = project.entry;
     // data.company is now the slug (e.g. 'itau')
     const companySlug = data.company || ''; 
-    
-    // Resolve company data using the helper we added to mdx.ts
-    // We need to import getCompanyBySlug in this file.
-    // However, since this file uses keystatic reader, maybe we can use reader to fetch company?
-    // Let's stick to the JSON helper for simplicity if possible, or use reader.collections.companies.read(slug)
     
     let companyName = 'Other';
     let companyIcon: string | null = null;
@@ -60,8 +52,15 @@ export async function getProjectsGroupedByCompany(): Promise<ProjectGroupData[]>
       title: data.title,
       image: data.coverImage || null,
       company: companyName,
+      sortOrder: data.sortOrder ?? 99,
     });
   }
 
-  return Object.values(groups);
+  // Sort projects inside each group
+  const result = Object.values(groups).map(group => ({
+    ...group,
+    projects: group.projects.sort((a, b) => a.sortOrder - b.sortOrder)
+  }));
+
+  return result;
 }

@@ -22,6 +22,7 @@ export default config({
       format: { contentField: 'content' },
       schema: {
          title: fields.slug({ name: { label: 'Title' } }),
+         sortOrder: fields.integer({ label: 'Sort Order', defaultValue: 99 }),
          company: fields.relationship({
              label: 'Company',
              collection: 'companies',

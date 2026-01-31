@@ -2,6 +2,7 @@ import React from 'react';
 import { notFound } from 'next/navigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { getProjectBySlug, getAllProjects, getProjectSlugs, getCompanyBySlug } from '@/lib/mdx';
+import { cn } from '@/lib/utils';
 import { ProjectStats } from '@/components/mdx/ProjectStats';
 import { ProjectSection } from '@/components/mdx/ProjectSection';
 import { ProjectNavigation } from '@/components/mdx/ProjectNavigation';
@@ -52,49 +53,69 @@ export default async function ProjectPage({ params }: { params: { slug: string }
   const brandName = companyData ? companyData.name : frontmatter.company;
   const brandIcon = companyData ? companyData.icon : frontmatter.icon;
 
-  // Determine next project for navigation
-  // Logic: find current index, get next, loop back to start if at end
   const allProjects = getAllProjects();
-  const currentIndex = allProjects.findIndex(p => p.slug === slug);
-  const nextIndex = (currentIndex + 1) % allProjects.length;
-  const nextProjectData = allProjects[nextIndex];
 
-  // Format Case Number (e.g. "Case 01")
-  const caseNumber = `Case ${String(currentIndex + 1).padStart(2, '0')}`;
+  // Filter projects for the current company first
+  const companyProjects = allProjects.filter(p => p.frontmatter.company === frontmatter.company);
+  
+  // Find index within the company specific list
+  const currentCompanyIndex = companyProjects.findIndex(p => p.slug === slug);
+  
+  // Format Case Number (e.g. "Case 01") - 1-based index
+  const caseNumber = `Case ${String(currentCompanyIndex + 1).padStart(2, '0')}`;
 
-  // Filter Related Projects (Same Company, excluding current)
-  // We want to list ALL projects from this company to allow navigation between them.
-  // Ideally, we assign them indexes based on their order in the global list or company specific list?
-  // Let's use their global index for the number "02", "03", etc.
-  const relatedProjects = allProjects
-    .map((p, index) => ({ ...p, globalIndex: index + 1 }))
-    .filter(p => p.frontmatter.company === frontmatter.company && p.slug !== slug)
-    .map(p => ({
-        slug: p.slug,
-        title: p.frontmatter.title,
-        index: p.globalIndex
-    }));
-
-
+  // Related Projects: All other projects from the same company
+  // We map them to include their 1-based index relative to the company list
+  const relatedProjects = companyProjects
+    .map((p, index) => ({ 
+        slug: p.slug, 
+        title: p.frontmatter.title, 
+        index: index + 1 // 1-based index
+    }))
+    .filter(p => p.slug !== slug);
 
 
+
+
+
+  const StandardElement = (Tag: any) => (props: any) => (
+    <Tag {...props} className={cn("col-span-4 md:col-start-2 md:col-span-10 font-serif text-[18px] md:text-[20px] leading-[1.6] text-[#212121] mb-6", props.className)} />
+  );
+
+  const BlockWrapper = (Component: any) => (props: any) => (
+    <div className="col-span-4 md:col-span-12 w-full">
+      <Component {...props} />
+    </div>
+  );
 
   const components = {
+    // Standard Elements
+    p: StandardElement('p'),
+    h1: StandardElement('h1'),
+    h2: StandardElement('h2'),
+    h3: StandardElement('h3'),
+    h4: StandardElement('h4'),
+    h5: StandardElement('h5'),
+    h6: StandardElement('h6'),
+    ul: (props: any) => <ul {...props} className="col-span-4 md:col-start-2 md:col-span-10 list-disc pl-4 mb-6" />,
+    ol: (props: any) => <ol {...props} className="col-span-4 md:col-start-2 md:col-span-10 list-decimal pl-4 mb-6" />,
+    blockquote: (props: any) => <blockquote {...props} className="col-span-4 md:col-start-2 md:col-span-10 border-l-4 border-neutral-200 pl-4 italic mb-6" />,
+
     // Standard MDX matching Keystatic Blocks
-    KeyResults: ProjectStats,
-    GridList: ProjectGridLists,
-    HighlightBlock: HighlightBlock,
-    StandardGridImage: GridImage,
-    ProjectVideo: ProjectVideo,
-    SectionHeader: SectionHeader,
-    BeforeAfterSlider: BeforeAfterSlider,
-    FullWidthSection: FullWidthSection,
-    ProjectSection: ProjectSection,
+    KeyResults: BlockWrapper(ProjectStats),
+    GridList: BlockWrapper(ProjectGridLists),
+    HighlightBlock: BlockWrapper(HighlightBlock),
+    StandardGridImage: BlockWrapper(GridImage),
+    ProjectVideo: BlockWrapper(ProjectVideo),
+    SectionHeader: BlockWrapper(SectionHeader),
+    BeforeAfterSlider: BlockWrapper(BeforeAfterSlider),
+    FullWidthSection: BlockWrapper(FullWidthSection),
+    ProjectSection: BlockWrapper(ProjectSection),
     
     // Fallbacks
-    ProjectStats,
-    ProjectGridLists,
-    ProjectDetailedHeader,
+    ProjectStats: BlockWrapper(ProjectStats),
+    ProjectGridLists: BlockWrapper(ProjectGridLists),
+    ProjectDetailedHeader: BlockWrapper(ProjectDetailedHeader),
     Image, 
   };
 
@@ -104,17 +125,12 @@ export default async function ProjectPage({ params }: { params: { slug: string }
       
       <main className="pt-20">
         {/* Work Section Header with Brand and Breadcrumbs */}
-        {/* Header & Title - Grid Cols 2-11 */}
-        <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-6 pt-16 mb-[72px] md:mb-[100px]">
-            <div className="col-span-1 md:col-start-2 md:col-span-10 flex flex-col">
                 <WorkSectionHeader 
                     brandName={brandName}
                     brandIconSrc={brandIcon}
                     caseName={caseNumber}
-                    className="px-0 py-0 lg:px-0 max-w-none"
+                    className="pt-16 mb-[72px] md:mb-[100px]"
                 />
-            </div>
-        </div>
 
         <ProjectHero 
             title={frontmatter.title}
@@ -123,15 +139,15 @@ export default async function ProjectPage({ params }: { params: { slug: string }
         />
 
         {/* MDX Content & Footer - Grid Cols 2-11 */}
-        <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-6">
-            <div className="col-span-1 md:col-span-12">
+        <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-4 md:grid-cols-12 gap-x-6">
+            <div className="contents">
                 <MDXRemote source={content} components={components} />
             </div>
         </div>
 
         {/* Related Projects Footer - Grid Cols 2-11 */}
         <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-6">
-            <div className="col-span-1 md:col-start-2 md:col-span-10">
+            <div className="col-span-4 md:col-span-12">
                 <RelatedProjects
                     companyName={brandName}
                     companyIcon={brandIcon}
